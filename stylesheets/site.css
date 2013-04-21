@@ -1,0 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(http://fonts.googleapis.com/css?family=Sofia);
+@import url(http://fonts.googleapis.com/css?family=Amaranth);
+
+body, ul { margin: 0px; padding: 0px; }
+
+body { font-size: 12px; }
+
+blockquote {
+  padding: 10px 10px 7px 60px;
+  font-size: 1.3em;
+  font-family: 'Sofia', Georgia, Serif;
+  background-image: url('../images/notepad.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+blockquote p { padding: 0px 15px 0px 0px; }
+
+nav li, ul.playlist li { list-style: none; font-family: 'Amaranth'; }
+
+nav {
+  background: #45484d;
+  background: -moz-linear-gradient(top, #45484d 0%, #000000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000));
+  background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%);
+  background: -o-linear-gradient(top, #45484d 0%,#000000 100%);
+  background: -ms-linear-gradient(top, #45484d 0%,#000000 100%);
+  background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+}
+
+#content { width: 1100px; position: absolute; left: 140px; }
+
+#main-content { margin-top: 10px; float: left; width: 750px; padding-left: 180px; }
+
+.poll-left {
+  background-image: url('../images/barber-pole.png');
+  background-repeat: repeat-y;
+  background-position: top right;
+  padding-right: 35px;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 25px;
+}
+
+.poll-right {
+  background-image: url('../images/barber-pole.png');
+  background-repeat: repeat-y;
+  background-position: top right;
+  padding-right: 35px;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  width: 25px;
+}
+
+.hidden { display: none; }
+
+#twitter-timeline-container { margin-top: 7px; }
+
+#address h2 { width: 300px; font-size: 1.79em; margin: 0px 0px 5px 0px; font-family: 'Yanone Kaffeesatz', sans-serif; }
+
+#navigation { padding: 10px 10px 35px 70px; margin: auto; width: 780px; }
+#navigation li { float: left; font-size: 1.8em; margin-right: 20px; width: 15%; text-align: center; border-left: 1px black solid; padding-left: 10px; }
+#navigation li.home { width: 24%; }
+#navigation li.gallery { width: 24%; }
+#navigation li.appointments { width: 22%; }
+#navigation li.contact { float: right; margin-right: 0px; }
+#navigation li a { color: white; text-decoration: none; }
+#navigation li a {
+  background: url('http://wcdn4.dataknet.com/static/resources/icons/set13/36d935c3623.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px;
+  padding-left: 16px;
+}
+
+#testimonials { -moz-box-shadow: 0 0 5px #888; -webkit-box-shadow: 0 0 5px#888; box-shadow: 0 0 5px #888; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+#haircut-gallery { width: 750px; height: 500px; margin-bottom: 10px; }
+
+.twitter-timeline { width: 750px; }

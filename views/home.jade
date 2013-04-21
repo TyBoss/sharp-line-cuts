@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  #videos
+    .video
+      iframe(width="750", height="500", src="https://www.youtube.com/embed/6pbY6I5aut8", frameborder="0", allowfullscreen)
+
+  #testimonials
+    each quote in quotations
+      blockquote
+        p
+          &quot; #{quote.quote} &quot;
+        p
+          span --
+          cite= quote.cite

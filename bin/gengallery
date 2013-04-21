@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var jade        = require('jade'),
+    inPath      = __dirname + '/../views/gallery.jade',
+    fs          = require('fs'),
+    cutsDir     = __dirname + '/../images/cuts',
+    files       = fs.readdirSync(cutsDir),
+    str         = fs.readFileSync(inPath, 'utf8'),
+    fn          = jade.compile(str, { filename: inPath, pretty: true }),
+    output      = fn({ images: files });
+    outPath     = __dirname + '/../site/haircut-gallery.htm';
+
+fs.writeFileSync(outPath, output);

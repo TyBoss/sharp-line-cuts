@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+var quotations  = [
+                    { quote:  "Most modern calendars mar the sweet simplicity of our lives by reminding us that " +
+                              "each day that passes is the anniversary of some perfectly uninteresting event.",
+                      cite:   "Oscar Wilde"
+                    },
+                    { quote:  "Most modern calendars mar the sweet simplicity of our lives by reminding us that " +
+                              "each day that passes is the anniversary of some perfectly uninteresting event.",
+                      cite:   "Oscar Wilde"
+                    },
+                    { quote:  "Most modern calendars mar the sweet simplicity of our lives by reminding us that " +
+                              "each day that passes is the anniversary of some perfectly uninteresting event.",
+                      cite:   "Oscar Wilde"
+                    },
+                    { quote:  "Most modern calendars mar the sweet simplicity of our lives by reminding us that " +
+                              "each day that passes is the anniversary of some perfectly uninteresting event.",
+                      cite:   "Oscar Wilde"
+                    }
+                  ],
+    jade        = require('jade'),
+    inPath      = __dirname + '/../views/home.jade',
+    fs          = require('fs'),
+    str         = fs.readFileSync(inPath, 'utf8'),
+    fn          = jade.compile(str, { filename: inPath, pretty: true }),
+    output      = fn({ quotations: quotations });
+    outPath     = __dirname + '/../site/index.htm';
+
+fs.writeFileSync(outPath, output);
