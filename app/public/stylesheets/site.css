@@ -34,26 +34,22 @@ nav {
 
 #main-content { margin-top: 10px; float: left; width: 750px; padding-left: 180px; }
 
-.poll-left {
+.poll-left, .poll-right {
   background-image: url('../images/barber-pole.png');
   background-repeat: repeat-y;
   background-position: top right;
   padding-right: 35px;
   position: absolute;
   height: 100%;
-  left: 0;
   width: 25px;
 }
 
+.poll-left {
+  left: 0;
+}
+
 .poll-right {
-  background-image: url('../images/barber-pole.png');
-  background-repeat: repeat-y;
-  background-position: top right;
-  padding-right: 35px;
-  position: absolute;
-  height: 100%;
   right: 0;
-  width: 25px;
 }
 
 .hidden { display: none; }
