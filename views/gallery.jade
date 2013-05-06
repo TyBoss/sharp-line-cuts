@@ -1,20 +1,37 @@
 extends layout
 
 block content
-  #haircut-gallery
-    each path in images
-      img(src="images/haircuts/#{path}")
+  #haircut-gallery-wrapper
+    ul#image-sets
+      each set in imageSets
+        li.image-set
+          a(href="#hairstyles/#{set.displayName}", data-id="#{set.id}") #{set.displayName}
+    #haircut-gallery
   include facebook-comment-widget
   include twitter-haircut-widget
 append scripts
   script(type="text/javascript", src="javascripts/galleria-1.2.9.min.js")
+  script(type="text/javascript", src="galleria/plugins/flickr/galleria.flickr.min.js")
   script(type="text/javascript")
     $(function() {
       Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
-      $('#haircut-gallery').galleria({
-        transition: 'fade',
-        youtube: {
-          controls: 1
-        }
-      });
+
+      var firstSet = $('.image-set a').click(function() {
+        var id = $(this).data('id');
+
+        loadImageSet(id);
+      }).first();
+
+      var id = firstSet.data('id');
+
+      loadImageSet(id);
+
+      function loadImageSet(id) {
+        Galleria.run('#haircut-gallery', {
+          flickr: 'set:' + id,
+          flickrOptions: {
+              sort: 'date-posted-asc'
+          }
+        });
+      }
     });

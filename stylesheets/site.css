@@ -70,7 +70,7 @@ nav {
 #navigation li.contact { float: right; margin-right: 0px; }
 #navigation li a { color: white; text-decoration: none; }
 #navigation li a {
-  background: url('http://wcdn4.dataknet.com/static/resources/icons/set13/36d935c3623.png');
+  background: url('../images/scissors-icon.png');
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 16px;
@@ -83,6 +83,13 @@ nav {
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
 
-#haircut-gallery { width: 750px; height: 500px; margin-bottom: 10px; }
+#haircut-gallery { width: 665px; height: 500px; margin-bottom: 10px; margin-left: 10px; float: left; }
 
 .twitter-timeline { width: 750px; }
+
+.image-set { font-family: 'Amaranth'; height: 15px; list-style: none; margin-bottom: 4px; padding-bottom: 4.5px; font-size: 1.05em; border-bottom: 1px black solid; }
+.image-set a { text-decoration: none; color: black; }
+
+#image-sets { float: left; }
+
+.image-set a { background: url('../images/camera-icon.png'); background-repeat: no-repeat; background-position: left center; background-size: 16px; padding-left: 16px; }

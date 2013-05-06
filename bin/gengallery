@@ -3,11 +3,12 @@
 var jade        = require('jade'),
     inPath      = __dirname + '/../views/gallery.jade',
     fs          = require('fs'),
-    cutsDir     = __dirname + '/../images/cuts',
-    files       = fs.readdirSync(cutsDir),
+    imageSets   = [{ displayName: 'Mohawks', id: '72157633383072503' }, { displayName: 'Fades', id: '72157633383072509' },
+                  { displayName: 'Caesars', id: '72157633402512499' }, { displayName: 'Afro', id: '72157633402115539' },
+                  { displayName: 'Custom 1', id: ''}, { displayName: 'Custom 2', id: '' }],
     str         = fs.readFileSync(inPath, 'utf8'),
     fn          = jade.compile(str, { filename: inPath, pretty: true }),
-    output      = fn({ images: files });
+    output      = fn({ imageSets: imageSets });
     outPath     = __dirname + '/../site/haircut-gallery.htm';
 
 fs.writeFileSync(outPath, output);
