@@ -64,8 +64,8 @@ nav {
 #navigation li.gallery { width: 24%; }
 #navigation li.appointments { width: 22%; }
 #navigation li.contact { float: right; margin-right: 0px; }
-#navigation li a { color: white; text-decoration: none; }
 #navigation li a {
+  color: white; text-decoration: none;
   background: url('../images/scissors-icon.png');
   background-repeat: no-repeat;
   background-position: left center;

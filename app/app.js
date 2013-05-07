@@ -1,7 +1,7 @@
-var express = require('express'),
-    routes  = require('./routes'),
-    http    = require('http'),
-    path    = require('path');
+var express       = require('express'),
+    staticContent = require('./routes/static-content'),
+    http          = require('http'),
+    path          = require('path');
 
 var app = express();
 
@@ -21,9 +21,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.staticContent.index);
-app.get('/home', routes.staticContext.index);
-app.get('haircut-gallery', routes.staticContent.gallery);
+app.get('/', staticContent.index);
+app.get('/home', staticContent.index);
+app.get('/haircut-gallery', staticContent.gallery);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
