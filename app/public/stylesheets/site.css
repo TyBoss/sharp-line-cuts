@@ -85,7 +85,14 @@ nav {
 
 .image-set { font-family: 'Amaranth'; height: 15px; list-style: none; margin-bottom: 4px; padding-bottom: 4.5px; font-size: 1.05em; border-bottom: 1px black solid; }
 .image-set a { text-decoration: none; color: black; }
+.image-set a {
+  background: url('../images/camera-icon.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px;
+  padding-left: 16px;
+  text-decoration: none; color: black;
+}
 
 #image-sets { float: left; }
 
-.image-set a { background: url('../images/camera-icon.png'); background-repeat: no-repeat; background-position: left center; background-size: 16px; padding-left: 16px; }
